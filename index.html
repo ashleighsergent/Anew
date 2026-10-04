@@ -1,1382 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="anew — a new way of water. Discover the Limited Edition Summer Drop.">
-
-<title>anew — A New Way of Water</title>
-
+<meta name="description" content="ANEW — a new way of water. Discover the Limited Edition Summer Drop.">
+<title>ANEW — A New Way of Water</title>
 
 <style>
-
-/* =====================================================
-   ANEW — GLOBAL
-===================================================== */
-
 :root {
   --navy: #071d73;
   --blue: #0758aa;
   --yellow: #f4ff4f;
   --pale: #d9ecf8;
   --white: #ffffff;
-  --light-blue: #edf6fb;
   --text: #071d73;
-
   --radius: 24px;
-
-  --shadow:
-    0 18px 50px rgba(7,29,115,.12);
-
+  --shadow: 0 18px 50px rgba(7,29,115,.12);
   --max-width: 1320px;
 }
 
+* { box-sizing: border-box; }
 
-* {
-  box-sizing: border-box;
-}
-
-
-html {
-  scroll-behavior: smooth;
-}
-
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-
   background: white;
-
   overflow-x: hidden;
 }
 
+img { max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
 
-img {
-  max-width: 100%;
+.container {
+  width: min(calc(100% - 40px), var(--max-width));
+  margin: auto;
 }
 
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-button,
-input {
-  font: inherit;
-}
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
+/* NAVIGATION */
 
 header {
-
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
-
-  background:
-    rgba(255,255,255,.96);
-
-  backdrop-filter:
-    blur(14px);
-
-  border-bottom:
-    1px solid rgba(7,29,115,.08);
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(7,29,115,.08);
 }
 
-
 .nav {
-
-  width:
-    min(
-      calc(100% - 40px),
-      var(--max-width)
-    );
-
+  width: min(calc(100% - 40px), var(--max-width));
   min-height: 86px;
-
   margin: auto;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 }
 
-
 .brand {
-
   font-size: 40px;
-
   font-weight: 900;
-
   letter-spacing: -4px;
 }
 
-
 .navlinks {
-
   display: flex;
-
   gap: 35px;
-
   align-items: center;
-
   font-weight: 700;
 }
 
-
 .navlinks a {
-
   position: relative;
 }
 
-
 .navlinks a::after {
-
   content: "";
-
   position: absolute;
-
   left: 0;
-
   bottom: -8px;
-
   height: 3px;
-
   width: 0;
-
-  background:
-    var(--yellow);
-
+  background: var(--yellow);
   transition: .25s;
 }
 
-
 .navlinks a:hover::after {
-
   width: 100%;
 }
 
-
 .cart {
-
   border: 0;
-
   background: none;
-
   cursor: pointer;
-
   position: relative;
-
   color: var(--navy);
 }
 
-
 .cart svg {
-
   width: 32px;
-
   height: 32px;
 }
 
-
 .cart-badge {
-
   position: absolute;
-
   top: -5px;
-
   right: -8px;
-
   width: 19px;
-
   height: 19px;
-
   border-radius: 50%;
-
-  background:
-    var(--yellow);
-
+  background: var(--yellow);
   font-size: 11px;
-
   font-weight: 900;
-
   display: grid;
-
   place-items: center;
 }
 
-
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero {
-
   min-height: 650px;
-
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  background:
-    var(--blue);
-
-  color:
-    var(--yellow);
+  grid-template-columns: 1fr 1fr;
+  background: var(--blue);
+  color: var(--yellow);
 }
 
-
 .hero-copy {
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   padding: 80px;
 }
 
-
 .eyebrow {
-
   font-size: 13px;
-
   font-weight: 800;
-
   letter-spacing: .16em;
-
   text-transform: uppercase;
-
   margin-bottom: 20px;
 }
 
-
 .hero h1 {
-
-  font-size:
-    clamp(58px, 7vw, 105px);
-
+  font-size: clamp(58px, 7vw, 105px);
   line-height: .88;
-
   letter-spacing: -6px;
-
   margin: 0 0 30px;
-
   font-weight: 900;
 }
 
-
 .hero p {
-
-  color:
-    white;
-
+  color: white;
   font-size: 19px;
-
   line-height: 1.5;
-
   max-width: 520px;
-
   margin-bottom: 32px;
 }
 
-
 .hero-image {
-
   min-height: 650px;
-
-  background-image:
-    url("steffi-Cj0tPzC5Uic-unsplash.jpg");
-
-  background-size:
-    cover;
-
-  background-position:
-    center;
+  background-image: url("steffi-Cj0tPzC5Uic-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
 }
-
 
 .btn {
-
   display: inline-block;
-
   width: max-content;
-
   border: 0;
-
   border-radius: 999px;
-
   padding: 16px 28px;
-
-  background:
-    var(--yellow);
-
-  color:
-    var(--navy);
-
+  background: var(--yellow);
+  color: var(--navy);
   font-weight: 900;
-
   cursor: pointer;
-
   transition: .2s;
-
-  box-shadow:
-    0 7px 0 rgba(7,29,115,.25);
+  box-shadow: 0 7px 0 rgba(7,29,115,.25);
 }
-
 
 .btn:hover {
-
-  transform:
-    translateY(-3px);
+  transform: translateY(-3px);
 }
 
-
 .btn:disabled {
-
   opacity: .45;
-
   cursor: not-allowed;
-
   transform: none;
 }
 
-
-/* =====================================================
-   MARQUEE
-===================================================== */
+/* MARQUEE */
 
 .marquee {
-
-  background:
-    var(--navy);
-
-  color:
-    var(--yellow);
-
-  overflow:
-    hidden;
-
-  white-space:
-    nowrap;
+  background: var(--navy);
+  color: var(--yellow);
+  overflow: hidden;
+  white-space: nowrap;
 }
-
 
 .track {
-
-  display:
-    inline-flex;
-
-  gap:
-    45px;
-
-  align-items:
-    center;
-
-  padding:
-    20px 0;
-
-  font-size:
-    clamp(32px, 4.5vw, 70px);
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    -4px;
-
-  animation:
-    marquee 22s linear infinite;
+  display: inline-flex;
+  gap: 45px;
+  align-items: center;
+  padding: 20px 0;
+  font-size: clamp(32px, 4.5vw, 70px);
+  font-weight: 900;
+  letter-spacing: -4px;
+  animation: marquee 22s linear infinite;
 }
-
 
 .track span:nth-child(2n) {
-
-  color:
-    #d8e8f6;
+  color: #d8e8f6;
 }
-
 
 @keyframes marquee {
-
-  from {
-    transform:
-      translateX(0);
-  }
-
-  to {
-    transform:
-      translateX(-50%);
-  }
-
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-
-/* =====================================================
-   QUIZ SECTION
-===================================================== */
+/* QUIZ */
 
 .summer {
-
-  padding:
-    80px 0;
+  padding: 80px 0;
 }
-
-
-.container {
-
-  width:
-    min(
-      calc(100% - 40px),
-      var(--max-width)
-    );
-
-  margin:
-    auto;
-}
-
 
 .split {
-
-  display:
-    grid;
-
-  grid-template-columns:
-    1.05fr .95fr;
-
-  gap:
-    25px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 25px;
 }
-
 
 .lifestyle {
-
-  min-height:
-    590px;
-
-  border-radius:
-    var(--radius);
-
-  background-image:
-    url("Gemini_Generated_Image_l7hdpil7hdpil7hd.jpg");
-
-  background-size:
-    cover;
-
-  background-position:
-    center;
-
-  box-shadow:
-    var(--shadow);
+  min-height: 590px;
+  border-radius: var(--radius);
+  background-image: url("Gemini_Generated_Image_l7hdpil7hdpil7hd.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
 }
-
 
 .quiz-card {
-
-  background:
-    var(--pale);
-
-  border:
-    3px solid var(--yellow);
-
-  border-radius:
-    var(--radius);
-
-  padding:
-    42px;
-
-  display:
-    flex;
-
-  flex-direction:
-    column;
-
-  justify-content:
-    center;
-
-  box-shadow:
-    var(--shadow);
+  background: var(--pale);
+  border: 3px solid var(--yellow);
+  border-radius: var(--radius);
+  padding: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--shadow);
 }
-
 
 .quiz-card h2 {
-
-  font-size:
-    clamp(35px,4vw,52px);
-
-  line-height:
-    .95;
-
-  letter-spacing:
-    -3px;
-
-  margin:
-    0 0 15px;
+  font-size: clamp(35px,4vw,52px);
+  line-height: .95;
+  letter-spacing: -3px;
+  margin: 0 0 15px;
 }
-
 
 .quiz-card .sub {
-
-  line-height:
-    1.5;
-
-  color:
-    #20367d;
+  line-height: 1.5;
+  color: #20367d;
 }
-
 
 .progress {
-
-  height:
-    7px;
-
-  background:
-    #b8d1e5;
-
-  border-radius:
-    50px;
-
-  overflow:
-    hidden;
-
-  margin:
-    25px 0 30px;
+  height: 7px;
+  background: #b8d1e5;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 25px 0 30px;
 }
-
 
 .progress i {
-
-  display:
-    block;
-
-  height:
-    100%;
-
-  width:
-    25%;
-
-  background:
-    var(--yellow);
-
-  transition:
-    .3s;
+  display: block;
+  height: 100%;
+  width: 33.33%;
+  background: var(--yellow);
+  transition: .3s;
 }
-
 
 .question {
-
-  font-size:
-    23px;
-
-  font-weight:
-    850;
-
-  line-height:
-    1.15;
-
-  margin-bottom:
-    18px;
+  font-size: 23px;
+  font-weight: 850;
+  line-height: 1.15;
+  margin-bottom: 18px;
 }
-
 
 .answers {
-
-  display:
-    grid;
-
-  gap:
-    11px;
+  display: grid;
+  gap: 11px;
 }
-
 
 .answer {
-
-  text-align:
-    left;
-
-  border:
-    2px solid transparent;
-
-  background:
-    #eef5f9;
-
-  color:
-    var(--navy);
-
-  border-radius:
-    14px;
-
-  padding:
-    16px;
-
-  font-weight:
-    750;
-
-  cursor:
-    pointer;
-
-  transition:
-    .2s;
+  text-align: left;
+  border: 2px solid transparent;
+  background: #eef5f9;
+  color: var(--navy);
+  border-radius: 14px;
+  padding: 16px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: .2s;
 }
-
 
 .answer:hover {
-
-  transform:
-    translateX(4px);
-
-  border-color:
-    var(--navy);
+  transform: translateX(4px);
+  border-color: var(--navy);
 }
-
 
 .answer.selected {
-
-  background:
-    var(--yellow);
-
-  border-color:
-    var(--navy);
+  background: var(--yellow);
+  border-color: var(--navy);
 }
-
 
 .quiz-actions {
-
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    space-between;
-
-  margin-top:
-    22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
 }
 
-
-/* =====================================================
-   EMAIL CAPTURE
-===================================================== */
+/* EMAIL CAPTURE */
 
 .email-screen {
-
-  display:
-    none;
+  display: none;
 }
-
 
 .email-screen.show {
-
-  display:
-    block;
+  display: block;
 }
-
-
-.email-screen h2 {
-
-  margin-bottom:
-    15px;
-}
-
 
 .email-input {
-
-  width:
-    100%;
-
-  padding:
-    17px 18px;
-
-  border:
-    2px solid #b8d1e5;
-
-  border-radius:
-    13px;
-
-  background:
-    white;
-
-  color:
-    var(--navy);
-
-  outline:
-    none;
-
-  margin:
-    15px 0 12px;
-
-  transition:
-    .2s;
+  width: 100%;
+  padding: 17px 18px;
+  border: 2px solid #b8d1e5;
+  border-radius: 13px;
+  background: white;
+  color: var(--navy);
+  outline: none;
+  margin: 15px 0 12px;
+  transition: .2s;
 }
-
 
 .email-input:focus {
-
-  border-color:
-    var(--navy);
-
-  box-shadow:
-    0 0 0 4px rgba(7,29,115,.08);
+  border-color: var(--navy);
+  box-shadow: 0 0 0 4px rgba(7,29,115,.08);
 }
-
 
 .email-input.invalid {
-
-  border-color:
-    #d52f2f;
-
-  background:
-    #fff5f5;
+  border-color: #d52f2f;
+  background: #fff5f5;
 }
-
 
 .email-error {
-
-  display:
-    none;
-
-  color:
-    #b52222;
-
-  font-size:
-    13px;
-
-  font-weight:
-    700;
-
-  margin:
-    0 0 15px;
+  display: none;
+  color: #b52222;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 15px;
 }
-
 
 .email-error.show {
-
-  display:
-    block;
+  display: block;
 }
-
 
 .checkbox-row {
-
-  display:
-    flex;
-
-  align-items:
-    flex-start;
-
-  gap:
-    10px;
-
-  font-size:
-    12px;
-
-  line-height:
-    1.4;
-
-  color:
-    #405683;
-
-  margin-bottom:
-    22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #405683;
+  margin-bottom: 22px;
 }
-
 
 .checkbox-row input {
-
-  margin-top:
-    3px;
-
-  accent-color:
-    var(--navy);
+  margin-top: 3px;
+  accent-color: var(--navy);
 }
 
-
-/* =====================================================
-   RESULT
-===================================================== */
+/* RESULT */
 
 .quiz-result {
-
-  display:
-    none;
-
-  text-align:
-    center;
+  display: none;
+  text-align: center;
 }
-
 
 .quiz-result.show {
-
-  display:
-    block;
+  display: block;
 }
-
 
 .result-icon {
-
-  width:
-    65px;
-
-  height:
-    65px;
-
-  border-radius:
-    50%;
-
-  background:
-    var(--yellow);
-
-  display:
-    grid;
-
-  place-items:
-    center;
-
-  margin:
-    0 auto 20px;
-
-  font-size:
-    28px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--yellow);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
 }
-
 
 .quiz-result h2 {
-
-  font-size:
-    clamp(42px,5vw,65px);
-
-  line-height:
-    .9;
-
-  letter-spacing:
-    -4px;
-
-  margin:
-    0 0 18px;
+  font-size: clamp(42px,5vw,65px);
+  line-height: .9;
+  letter-spacing: -4px;
+  margin: 0 0 18px;
 }
-
 
 .quiz-result .sub {
-
-  max-width:
-    480px;
-
-  margin:
-    auto;
-
-  line-height:
-    1.6;
+  max-width: 480px;
+  margin: auto;
+  line-height: 1.6;
 }
-
 
 .code {
-
-  display:
-    inline-block;
-
-  margin:
-    22px 0 15px;
-
-  padding:
-    16px 25px;
-
-  border:
-    2px dashed var(--navy);
-
-  border-radius:
-    12px;
-
-  background:
-    white;
-
-  font-weight:
-    950;
-
-  letter-spacing:
-    .15em;
-
-  font-size:
-    20px;
+  display: inline-block;
+  margin: 22px 0 15px;
+  padding: 16px 25px;
+  border: 2px dashed var(--navy);
+  border-radius: 12px;
+  background: white;
+  font-weight: 950;
+  letter-spacing: .15em;
+  font-size: 20px;
 }
 
-
-/* =====================================================
-   PRODUCTS
-===================================================== */
+/* PRODUCTS */
 
 .products {
-
-  background:
-    var(--pale);
-
-  padding:
-    90px 0;
+  background: var(--pale);
+  padding: 90px 0;
 }
-
 
 .section-head {
-
-  display:
-    flex;
-
-  justify-content:
-    space-between;
-
-  align-items:
-    end;
-
-  margin-bottom:
-    35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 35px;
 }
-
 
 .section-head h2 {
-
-  font-size:
-    clamp(42px,5vw,70px);
-
-  line-height:
-    .9;
-
-  letter-spacing:
-    -5px;
-
-  margin:
-    0;
+  font-size: clamp(42px,5vw,70px);
+  line-height: .9;
+  letter-spacing: -5px;
+  margin: 0;
 }
-
 
 .section-head p {
-
-  max-width:
-    420px;
-
-  line-height:
-    1.5;
+  max-width: 420px;
+  line-height: 1.5;
 }
-
 
 .product-grid {
-
-  display:
-    grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:
-    18px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
 }
-
 
 .product {
-
-  background:
-    white;
-
-  border-radius:
-    20px;
-
-  padding:
-    14px;
-
-  box-shadow:
-    0 10px 30px rgba(7,29,115,.08);
-
-  transition:
-    .25s;
+  background: white;
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(7,29,115,.08);
+  transition: .25s;
 }
-
 
 .product:hover {
-
-  transform:
-    translateY(-6px);
+  transform: translateY(-6px);
 }
 
+/* ALL FOUR PRODUCT IMAGES USE EXACTLY THE SAME FRAME */
 
 .bottle {
-
-  height:
-    390px;
-
-  border-radius:
-    16px;
-
-  overflow:
-    hidden;
-
-  background:
-    #edf5f9;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .bottle img {
-
-  width:
-    100%;
-
-  height:
-    100%;
-
-  object-fit:
-    contain;
-
-  display:
-    block;
-
-  transition:
-    transform .4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform .4s ease;
 }
-
 
 .product:hover .bottle img {
-
-  transform:
-    scale(1.04);
+  transform: scale(1.03);
 }
-
 
 .product h3 {
-
-  margin:
-    17px 4px 5px;
-
-  font-size:
-    20px;
+  margin: 17px 4px 5px;
+  font-size: 20px;
 }
-
 
 .product p {
-
-  margin:
-    0 4px 15px;
-
-  color:
-    #46608c;
-
-  font-size:
-    14px;
+  margin: 0 4px 15px;
+  color: #46608c;
+  font-size: 14px;
 }
-
 
 .buy {
-
-  width:
-    100%;
-
-  border:
-    2px solid var(--navy);
-
-  background:
-    white;
-
-  color:
-    var(--navy);
-
-  padding:
-    11px;
-
-  border-radius:
-    999px;
-
-  font-weight:
-    850;
-
-  cursor:
-    pointer;
-
-  transition:
-    .2s;
+  width: 100%;
+  border: 2px solid var(--navy);
+  background: white;
+  color: var(--navy);
+  padding: 11px;
+  border-radius: 999px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: .2s;
 }
-
 
 .buy:hover {
-
-  background:
-    var(--yellow);
-
-  transform:
-    translateY(-2px);
+  background: var(--yellow);
+  transform: translateY(-2px);
 }
 
-
-/* =====================================================
-   SUSTAINABILITY
-===================================================== */
+/* SUSTAINABILITY */
 
 .sustain {
-
-  padding:
-    90px 0;
-
-  background:
-    var(--yellow);
+  padding: 90px 0;
+  background: var(--yellow);
 }
-
 
 .sustain-grid {
-
-  display:
-    grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:
-    60px;
-
-  align-items:
-    center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
-
 
 .sustain h2 {
-
-  font-size:
-    clamp(45px,6vw,85px);
-
-  line-height:
-    .88;
-
-  letter-spacing:
-    -6px;
-
-  margin:
-    0 0 25px;
+  font-size: clamp(45px,6vw,85px);
+  line-height: .88;
+  letter-spacing: -6px;
+  margin: 0 0 25px;
 }
-
 
 .sustain p {
-
-  font-size:
-    18px;
-
-  line-height:
-    1.6;
-
-  max-width:
-    560px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 560px;
 }
-
 
 .stat {
-
-  background:
-    white;
-
-  border-radius:
-    24px;
-
-  padding:
-    34px;
-
-  display:
-    grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
-  gap:
-    18px;
-
-  box-shadow:
-    0 20px 50px rgba(7,29,115,.12);
+  background: white;
+  border-radius: 24px;
+  padding: 34px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+  box-shadow: 0 20px 50px rgba(7,29,115,.12);
 }
-
 
 .stat div {
-
-  padding:
-    22px;
-
-  background:
-    var(--pale);
-
-  border-radius:
-    16px;
+  padding: 22px;
+  background: var(--pale);
+  border-radius: 16px;
 }
-
 
 .stat strong {
-
-  display:
-    block;
-
-  font-size:
-    42px;
+  display: block;
+  font-size: 42px;
 }
-
 
 .stat span {
-
-  font-size:
-    13px;
-
-  font-weight:
-    700;
+  font-size: 13px;
+  font-weight: 700;
 }
 
-
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer {
-
-  background:
-    var(--navy);
-
-  color:
-    white;
-
-  padding:
-    45px 0;
+  background: var(--navy);
+  color: white;
+  padding: 45px 0;
 }
-
 
 .footer-top {
-
-  display:
-    flex;
-
-  justify-content:
-    space-between;
-
-  align-items:
-    center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 .footer-brand {
-
-  color:
-    var(--yellow);
-
-  font-size:
-    35px;
-
-  font-weight:
-    900;
+  color: var(--yellow);
+  font-size: 35px;
+  font-weight: 900;
 }
-
 
 .footer-links {
-
-  display:
-    flex;
-
-  gap:
-    25px;
-
-  font-weight:
-    700;
+  display: flex;
+  gap: 25px;
+  font-weight: 700;
 }
-
 
 .footer-bottom {
-
-  border-top:
-    1px solid rgba(255,255,255,.2);
-
-  margin-top:
-    30px;
-
-  padding-top:
-    20px;
-
-  display:
-    flex;
-
-  justify-content:
-    space-between;
-
-  font-size:
-    12px;
-
-  color:
-    #c4d1ea;
+  border-top: 1px solid rgba(255,255,255,.2);
+  margin-top: 30px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #c4d1ea;
 }
 
-
-/* =====================================================
-   TOAST
-===================================================== */
+/* TOAST */
 
 .toast {
-
-  position:
-    fixed;
-
-  right:
-    22px;
-
-  bottom:
-    22px;
-
-  z-index:
-    9999;
-
-  background:
-    var(--navy);
-
-  color:
-    white;
-
-  padding:
-    15px 20px;
-
-  border-radius:
-    13px;
-
-  transform:
-    translateY(150%);
-
-  transition:
-    .3s;
-
-  font-weight:
-    700;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.2);
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  background: var(--navy);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 13px;
+  transform: translateY(150%);
+  transition: .3s;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
 }
-
 
 .toast.show {
-
-  transform:
-    translateY(0);
+  transform: translateY(0);
 }
 
-
-/* =====================================================
-   MOBILE
-===================================================== */
+/* RESPONSIVE */
 
 @media(max-width:900px) {
 
@@ -1385,7 +644,8 @@ footer {
   }
 
   .navlinks {
-    display: none;
+    gap: 18px;
+    font-size: 14px;
   }
 
   .hero {
@@ -1410,99 +670,71 @@ footer {
   }
 
   .product-grid {
-    grid-template-columns:
-      repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
   }
-
 }
-
 
 @media(max-width:600px) {
 
   .container {
-    width:
-      calc(100% - 28px);
+    width: calc(100% - 28px);
+  }
+
+  .navlinks {
+    display: none;
   }
 
   .hero h1 {
-    font-size:
-      65px;
+    font-size: 65px;
   }
 
   .hero-image {
-    min-height:
-      340px;
+    min-height: 340px;
   }
 
   .quiz-card {
-    padding:
-      25px;
+    padding: 25px;
   }
 
   .product-grid {
-    grid-template-columns:
-      repeat(2,1fr);
-
-    gap:
-      10px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
   }
 
   .product {
-    padding:
-      10px;
-  }
-
-  .bottle {
-    height:
-      270px;
+    padding: 10px;
   }
 
   .section-head {
-    display:
-      block;
+    display: block;
   }
 
   .section-head p {
-    margin-top:
-      18px;
+    margin-top: 18px;
   }
 
   .footer-top,
   .footer-bottom {
-    display:
-      block;
+    display: block;
   }
 
   .footer-links {
-    margin-top:
-      20px;
-
-    flex-wrap:
-      wrap;
+    margin-top: 20px;
+    flex-wrap: wrap;
   }
-
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- NAVIGATION -->
 
 <header>
-
   <div class="nav">
 
-    <a class="brand" href="#">
-      anew
-    </a>
-
+    <a class="brand" href="#">anew</a>
 
     <nav class="navlinks">
 
@@ -1510,7 +742,10 @@ footer {
         shop
       </a>
 
-      <a href="#about">
+      <a
+        href="https://www.chooseanew.com/pages/about-us-anew"
+        target="_blank"
+        rel="noopener noreferrer">
         about
       </a>
 
@@ -1519,7 +754,6 @@ footer {
       </a>
 
     </nav>
-
 
     <button
       class="cart"
@@ -1535,48 +769,32 @@ footer {
         stroke-linejoin="round">
 
         <path d="M3 5h4l3 17h14l4-12H8"/>
-
         <circle cx="12" cy="27" r="1.5"/>
-
         <circle cx="25" cy="27" r="1.5"/>
 
       </svg>
 
-
-      <span
-        class="cart-badge"
-        id="cartCount">
-        0
-      </span>
+      <span class="cart-badge" id="cartCount">0</span>
 
     </button>
 
   </div>
-
 </header>
 
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
-
   <div class="hero-copy">
-
 
     <div class="eyebrow">
       summer drop / limited edition
     </div>
 
-
     <h1>
       a new way<br>
       to hydrate
     </h1>
-
 
     <p>
       Three quick questions to discover your summer
@@ -1584,29 +802,17 @@ footer {
       <strong>10% off</strong> the Limited Edition Summer Drop.
     </p>
 
-
-    <a
-      href="#quiz"
-      class="btn">
-
+    <a href="#quiz" class="btn">
       take the quiz
-
     </a>
-
 
   </div>
 
-
   <div class="hero-image"></div>
-
 
 </section>
 
-
-
-<!-- =====================================================
-     MARQUEE
-===================================================== -->
+<!-- MARQUEE -->
 
 <div class="marquee">
 
@@ -1616,65 +822,44 @@ footer {
       anew era of summer — LIMITED EDITION SUMMER DROP
     </span>
 
-    <span>
-      ✦
-    </span>
+    <span>✦</span>
 
     <span>
       anew era of summer — LIMITED EDITION SUMMER DROP
     </span>
 
-    <span>
-      ✦
-    </span>
+    <span>✦</span>
 
     <span>
       anew era of summer — LIMITED EDITION SUMMER DROP
     </span>
 
-    <span>
-      ✦
-    </span>
+    <span>✦</span>
 
   </div>
 
 </div>
 
+<!-- QUIZ -->
 
-
-<!-- =====================================================
-     QUIZ
-===================================================== -->
-
-<section
-  class="summer"
-  id="quiz">
-
+<section class="summer" id="quiz">
 
   <div class="container split">
 
-
     <div class="lifestyle"></div>
-
 
     <div class="quiz-card">
 
-
-      <!-- QUIZ QUESTIONS -->
-
       <div id="quizForm">
-
 
         <div class="eyebrow">
           hydration check-in
         </div>
 
-
         <h2>
           what's your<br>
           summer setting?
         </h2>
-
 
         <p class="sub">
           Three quick questions. Discover your
@@ -1682,78 +867,50 @@ footer {
           little summer surprise.
         </p>
 
-
         <div class="progress">
-
           <i id="progress"></i>
-
         </div>
 
+        <div class="question" id="question"></div>
 
-        <div
-          class="question"
-          id="question">
-        </div>
-
-
-        <div
-          class="answers"
-          id="answers">
-        </div>
-
+        <div class="answers" id="answers"></div>
 
         <div class="quiz-actions">
-
 
           <span id="step">
             1 / 3
           </span>
-
 
           <button
             class="btn"
             id="nextBtn"
             disabled
             style="padding:12px 20px">
-
             next
-
           </button>
-
 
         </div>
 
-
       </div>
-
-
 
       <!-- EMAIL CAPTURE -->
 
-      <div
-        class="email-screen"
-        id="emailScreen">
-
+      <div class="email-screen" id="emailScreen">
 
         <div class="eyebrow">
           almost there
         </div>
-
 
         <h2>
           your summer<br>
           match is ready.
         </h2>
 
-
         <p class="sub">
-
           Enter your email to reveal your personalised
           hydration match and unlock your
           <strong>10% off</strong> code.
-
         </p>
-
 
         <input
           type="email"
@@ -1763,15 +920,11 @@ footer {
           autocomplete="email"
           aria-label="Email address">
 
-
         <div
           class="email-error"
           id="emailError">
-
           Please enter a valid email address.
-
         </div>
-
 
         <label class="checkbox-row">
 
@@ -1786,321 +939,211 @@ footer {
 
         </label>
 
-
         <button
           class="btn"
           id="revealBtn">
-
           reveal my result
-
         </button>
 
-
-        <p
-          style="
-            font-size:11px;
-            color:#60749a;
-            margin-top:15px;
-          ">
-
-          Your email is used to personalise
-          your experience for this campaign.
-
+        <p style="font-size:11px;color:#60749a;margin-top:15px;">
+          Enter your email to continue to your personalised result.
         </p>
-
 
       </div>
 
-
-
       <!-- RESULT -->
 
-      <div
-        class="quiz-result"
-        id="result">
-
+      <div class="quiz-result" id="result">
 
         <div class="result-icon">
           ✦
         </div>
 
-
         <div class="eyebrow">
           your hydration vibe
         </div>
-
 
         <h2 id="resultTitle">
           The Coastline
         </h2>
 
-
-        <p
-          class="sub"
-          id="resultCopy">
-        </p>
-
+        <p class="sub" id="resultCopy"></p>
 
         <div class="code">
           SUMMER10
         </div>
 
-
-        <p
-          style="
-            font-size:13px;
-            font-weight:750;
-          ">
-
-          Use this code at checkout for
-          10% off the Limited Edition
-          Summer Drop.
-
+        <p style="font-size:13px;font-weight:750;">
+          Use this code at checkout for 10% off
+          the Limited Edition Summer Drop.
         </p>
-
 
         <button
           class="btn"
-          onclick="
-            document
-              .getElementById('shop')
-              .scrollIntoView({
-                behavior:'smooth'
-              });
-          ">
-
+          onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'});">
           shop the drop
-
         </button>
-
 
       </div>
 
-
     </div>
-
 
   </div>
 
-
 </section>
 
+<!-- PRODUCTS -->
 
-
-<!-- =====================================================
-     PRODUCTS
-===================================================== -->
-
-<section
-  class="products"
-  id="shop">
-
+<section class="products" id="shop">
 
   <div class="container">
 
-
     <div class="section-head">
 
-
       <h2>
-        the summer<br>
-        drop
+        ANEW way<br>
+        of water
       </h2>
 
-
       <p>
-
         Four colours. One new hydration ritual.
         Designed to keep up with wherever
         summer takes you.
-
       </p>
-
 
     </div>
 
-
-
     <div class="product-grid">
-
 
       <!-- YELLOW -->
 
       <article class="product">
 
-
         <div class="bottle">
 
           <img
-            src="32445860-3c36-4baa-81dd-ad0a07cee4ef.png"
-            alt="ANEW yellow bottle">
+            src="YELLOWBOTTLE.png"
+            alt="ANEW Summer Yellow bottle">
 
         </div>
-
 
         <h3>
           Summer Yellow
         </h3>
 
-
         <p>
           Bright, bold and impossible to miss.
         </p>
 
-
         <button
           class="buy"
           onclick="addToCart('Summer Yellow')">
-
           add to cart
-
         </button>
 
-
       </article>
-
-
 
       <!-- BLUE -->
 
       <article class="product">
 
-
         <div class="bottle">
 
           <img
-            src="ANEW_bot_F_SL_c_extended_2_1.webp"
-            alt="ANEW blue bottle">
+            src="BLUEBOTTLE.png"
+            alt="ANEW Pool Blue bottle">
 
         </div>
-
 
         <h3>
           Pool Blue
         </h3>
 
-
         <p>
           Cool, crisp and poolside-ready.
         </p>
 
-
         <button
           class="buy"
           onclick="addToCart('Pool Blue')">
-
           add to cart
-
         </button>
 
-
       </article>
-
-
 
       <!-- GREY -->
 
       <article class="product">
 
-
         <div class="bottle">
 
           <img
-            src="ANEW_bot_F_SL_c_extended_3_grey_printed.webp"
-            alt="ANEW grey bottle">
+            src="GREYBOTTLE.png"
+            alt="ANEW Grey bottle">
 
         </div>
-
 
         <h3>
           Cloud Grey
         </h3>
 
-
         <p>
           Clean, minimal and timeless.
         </p>
 
-
         <button
           class="buy"
           onclick="addToCart('Cloud Grey')">
-
           add to cart
-
         </button>
 
-
       </article>
-
-
 
       <!-- PINK -->
 
       <article class="product">
 
-
         <div class="bottle">
 
           <img
-            src="ANEW_bot_F_SL_c_extended_3_pink_printed.webp"
-            alt="ANEW pink bottle">
+            src="PINKBOTTLE.png"
+            alt="ANEW Pink bottle">
 
         </div>
-
 
         <h3>
           Blush Pink
         </h3>
 
-
         <p>
           Soft, playful and made for summer.
         </p>
 
-
         <button
           class="buy"
           onclick="addToCart('Blush Pink')">
-
           add to cart
-
         </button>
-
 
       </article>
 
-
     </div>
-
 
   </div>
 
-
 </section>
 
+<!-- SUSTAINABILITY -->
 
+<section class="sustain" id="about">
 
-<!-- =====================================================
-     SUSTAINABILITY / ABOUT
-===================================================== -->
-
-<section
-  class="sustain"
-  id="about">
-
-
-  <div
-    class="container sustain-grid">
-
+  <div class="container sustain-grid">
 
     <div>
-
 
       <div class="eyebrow">
         less waste / more water
       </div>
-
 
       <h2>
         hydration<br>
@@ -2108,260 +1151,172 @@ footer {
         the fuss.
       </h2>
 
-
       <p>
-
-        anew makes reusable hydration feel like
+        ANEW makes reusable hydration feel like
         part of your lifestyle — colourful,
         practical and designed to come with you.
-
       </p>
 
-
     </div>
 
-
-
-    <div
-      class="stat"
-      id="sustainability">
-
+    <div class="stat" id="sustainability">
 
       <div>
-
-        <strong>
-          01
-        </strong>
-
-        <span>
-          Reusable by design
-        </span>
-
+        <strong>01</strong>
+        <span>Reusable by design</span>
       </div>
-
 
       <div>
-
-        <strong>
-          02
-        </strong>
-
-        <span>
-          Made for everyday carry
-        </span>
-
+        <strong>02</strong>
+        <span>Made for everyday carry</span>
       </div>
-
 
       <div>
-
-        <strong>
-          03
-        </strong>
-
-        <span>
-          Summer-ready colour
-        </span>
-
+        <strong>03</strong>
+        <span>Summer-ready colour</span>
       </div>
-
 
       <div>
-
-        <strong>
-          04
-        </strong>
-
-        <span>
-          A new hydration ritual
-        </span>
-
+        <strong>04</strong>
+        <span>A new hydration ritual</span>
       </div>
-
 
     </div>
-
 
   </div>
 
-
 </section>
 
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
-
   <div class="container">
 
-
     <div class="footer-top">
-
 
       <div class="footer-brand">
         anew
       </div>
 
-
       <div class="footer-links">
-
 
         <a href="#shop">
           shop
         </a>
 
-
-        <a href="#about">
+        <a
+          href="https://www.chooseanew.com/pages/about-us-anew"
+          target="_blank"
+          rel="noopener noreferrer">
           about
         </a>
-
 
         <a href="#quiz">
           take the quiz
         </a>
 
-
       </div>
-
 
     </div>
 
-
-
     <div class="footer-bottom">
 
-
       <span>
-        © 2026 anew. All rights reserved.
+        © 2026 ANEW. All rights reserved.
       </span>
-
 
       <span>
         Limited Edition Summer Drop
       </span>
 
-
     </div>
-
 
   </div>
 
-
 </footer>
 
-
-
-<!-- =====================================================
-     TOAST
-===================================================== -->
-
-<div
-  class="toast"
-  id="toast">
-</div>
-
-
+<div class="toast" id="toast"></div>
 
 <script>
 
-/* =====================================================
-   QUIZ
-===================================================== */
-
+/* QUIZ DATA */
 
 const questions = [
 
   {
-    q:
-      "What is your ultimate summer setting?",
+    q: "What is your ultimate summer setting?",
 
     answers: [
 
       {
         letter: "A",
         title: "The Coastline",
-        description:
-          "Saltwater, sunshine and finding a quiet beach."
+        description: "Saltwater, sunshine and finding a quiet beach."
       },
 
       {
         letter: "B",
         title: "The Pavement",
-        description:
-          "Streetwear, city days and always being on the move."
+        description: "Streetwear, city days and always being on the move."
       },
 
       {
         letter: "C",
         title: "The Sanctuary",
-        description:
-          "A/C, curtains drawn and completely undisturbed."
+        description: "A/C, curtains drawn and completely undisturbed."
       }
 
     ]
   },
 
-
   {
-    q:
-      "How good are you at remembering to drink water?",
+    q: "How good are you at remembering to drink water?",
 
     answers: [
 
       {
         letter: "A",
         title: "Honestly? Pretty good.",
-        description:
-          "My bottle is basically an accessory."
+        description: "My bottle is basically an accessory."
       },
 
       {
         letter: "B",
         title: "I forget until I'm thirsty.",
-        description:
-          "I get busy and suddenly realise hours have passed."
+        description: "I get busy and suddenly realise hours have passed."
       },
 
       {
         letter: "C",
         title: "I need a reminder.",
-        description:
-          "An app, alarm or friend keeps me on track."
+        description: "An app, alarm or friend keeps me on track."
       }
 
     ]
   },
 
-
   {
-    q:
-      "Pick your ideal summer energy.",
+    q: "Pick your ideal summer energy.",
 
     answers: [
 
       {
         letter: "A",
         title: "Slow & sunny",
-        description:
-          "Beach days, golden hour and nowhere to be."
+        description: "Beach days, golden hour and nowhere to be."
       },
 
       {
         letter: "B",
         title: "Bold & busy",
-        description:
-          "Plans, people and spontaneous adventures."
+        description: "Plans, people and spontaneous adventures."
       },
 
       {
         letter: "C",
         title: "Soft & cosy",
-        description:
-          "Quiet afternoons and doing absolutely nothing."
+        description: "Quiet afternoons and doing absolutely nothing."
       }
 
     ]
@@ -2369,9 +1324,7 @@ const questions = [
 
 ];
 
-
 let currentQuestion = 0;
-
 let selectedAnswer = null;
 
 let scores = {
@@ -2380,55 +1333,40 @@ let scores = {
   C: 0
 };
 
-
 const questionElement =
   document.getElementById("question");
-
 
 const answersElement =
   document.getElementById("answers");
 
-
 const nextButton =
   document.getElementById("nextBtn");
 
-
 const progress =
   document.getElementById("progress");
-
 
 const step =
   document.getElementById("step");
 
 
-/* =====================================================
-   RENDER QUESTION
-===================================================== */
-
+/* RENDER QUESTION */
 
 function renderQuestion() {
 
-
   selectedAnswer = null;
-
   nextButton.disabled = true;
-
 
   const question =
     questions[currentQuestion];
 
-
   questionElement.textContent =
     question.q;
-
 
   step.textContent =
     `${currentQuestion + 1} / ${questions.length}`;
 
-
   progress.style.width =
     `${((currentQuestion + 1) / questions.length) * 100}%`;
-
 
   answersElement.innerHTML =
     question.answers
@@ -2468,47 +1406,34 @@ function renderQuestion() {
       })
       .join("");
 
-
   answersElement
     .querySelectorAll(".answer")
     .forEach(function(button) {
-
 
       button.addEventListener(
         "click",
         function() {
 
-
           answersElement
             .querySelectorAll(".answer")
             .forEach(function(btn) {
 
-              btn.classList.remove(
-                "selected"
-              );
+              btn.classList.remove("selected");
 
             });
 
-
-          button.classList.add(
-            "selected"
-          );
-
+          button.classList.add("selected");
 
           selectedAnswer =
             button.dataset.value;
 
-
           nextButton.disabled =
             false;
-
 
         }
       );
 
-
     });
-
 
   nextButton.textContent =
     currentQuestion === questions.length - 1
@@ -2518,41 +1443,30 @@ function renderQuestion() {
 }
 
 
-/* =====================================================
-   NEXT QUESTION
-===================================================== */
-
+/* NEXT QUESTION */
 
 nextButton.addEventListener(
   "click",
   function() {
 
-
     if (!selectedAnswer) {
       return;
     }
 
-
     scores[selectedAnswer]++;
-
 
     if (
       currentQuestion <
       questions.length - 1
     ) {
 
-
       currentQuestion++;
-
 
       renderQuestion();
 
-
     } else {
 
-
       showEmailCapture();
-
 
     }
 
@@ -2560,35 +1474,22 @@ nextButton.addEventListener(
 );
 
 
-/* =====================================================
-   EMAIL CAPTURE SCREEN
-===================================================== */
-
+/* EMAIL CAPTURE */
 
 function showEmailCapture() {
-
 
   document
     .getElementById("quizForm")
     .style.display = "none";
 
-
   document
     .getElementById("emailScreen")
     .classList.add("show");
 
-
-  progress.style.width =
-    "100%";
-
-
 }
 
 
-/* =====================================================
-   EMAIL VALIDATION
-===================================================== */
-
+/* EMAIL VALIDATION */
 
 document
   .getElementById("revealBtn")
@@ -2596,87 +1497,64 @@ document
     "click",
     function() {
 
-
       const email =
         document
           .getElementById("emailInput")
           .value
           .trim();
 
-
       const emailInput =
         document.getElementById(
           "emailInput"
         );
-
 
       const emailError =
         document.getElementById(
           "emailError"
         );
 
-
       const emailPattern =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-      if (
-        !emailPattern.test(email)
-      ) {
-
+      if (!emailPattern.test(email)) {
 
         emailInput.classList.add(
           "invalid"
         );
 
-
         emailError.classList.add(
           "show"
         );
 
-
         emailInput.focus();
-
 
         return;
 
       }
 
-
       emailInput.classList.remove(
         "invalid"
       );
 
-
       emailError.classList.remove(
         "show"
       );
-
 
       const button =
         document.getElementById(
           "revealBtn"
         );
 
-
-      button.disabled =
-        true;
-
+      button.disabled = true;
 
       button.textContent =
         "revealing your result...";
 
-
       /*
-       * DEMO EMAIL COLLECTION
-       *
-       * The email is intentionally NOT
-       * sent or stored anywhere.
-       *
-       * This creates a realistic
-       * assignment/demo experience.
-       */
-
+        DEMO ONLY:
+        Email is validated but is NOT
+        transmitted or stored anywhere.
+      */
 
       setTimeout(
         function() {
@@ -2687,28 +1565,21 @@ document
         800
       );
 
-
     }
   );
 
 
-/* =====================================================
-   SHOW RESULT
-===================================================== */
-
+/* SHOW RESULT */
 
 function showResult() {
-
 
   document
     .getElementById("emailScreen")
     .style.display = "none";
 
-
   document
     .getElementById("result")
     .classList.add("show");
-
 
   const winner =
     Object.entries(scores)
@@ -2718,9 +1589,7 @@ function showResult() {
 
       })[0][0];
 
-
   const results = {
-
 
     A: {
 
@@ -2732,7 +1601,6 @@ function showResult() {
 
     },
 
-
     B: {
 
       title:
@@ -2742,7 +1610,6 @@ function showResult() {
         "You like your summer with a little more energy. Your hydration has to keep up with city days, spontaneous plans and always being on the move."
 
     },
-
 
     C: {
 
@@ -2756,78 +1623,59 @@ function showResult() {
 
   };
 
-
   document
     .getElementById("resultTitle")
     .textContent =
     results[winner].title;
-
 
   document
     .getElementById("resultCopy")
     .textContent =
     results[winner].copy;
 
-
 }
 
 
-/* =====================================================
-   CART
-===================================================== */
-
+/* CART */
 
 let cartCount = 0;
 
-
 function addToCart(product) {
 
-
   cartCount++;
-
 
   document
     .getElementById("cartCount")
     .textContent =
     cartCount;
 
-
   showToast(
     product +
     " added to your cart."
   );
 
-
 }
 
 
-/* =====================================================
-   TOAST
-===================================================== */
-
+/* TOAST */
 
 function showToast(message) {
-
 
   const toast =
     document.getElementById(
       "toast"
     );
 
-
   toast.textContent =
     message;
-
 
   toast.classList.add(
     "show"
   );
 
-
   clearTimeout(
     window.toastTimer
   );
-
 
   window.toastTimer =
     setTimeout(
@@ -2844,16 +1692,11 @@ function showToast(message) {
 }
 
 
-/* =====================================================
-   START QUIZ
-===================================================== */
-
+/* START */
 
 renderQuestion();
 
 </script>
 
-
 </body>
-
 </html>
